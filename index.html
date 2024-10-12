@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- FONTAWSOME KIT -->
+    <script src="https://kit.fontawesome.com/5fe51e1cbb.js" crossorigin="anonymous"></script>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Manga Panel</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <div class="container-fluid px-5">
+            <!-- Logo: Keep it on the left -->
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="logo" height="50rem" width="auto"></a>
+
+            <!-- Navbar toggler for navigation links (collapses only on small screens) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Left-side: Navigation links beside the logo -->
+            <div class="collapse navbar-collapse" id="navbarLinks">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bookmarks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Novels</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Center: Search form (remains visible and centered on all screens) -->
+            <form class="d-flex mx-auto">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i></button>
+            </form>
+
+
+            <button class="btn btn-outline-light ms-lg-3" type="submit">
+                <i class="fa-regular fa-user"></i> 
+                <!-- Hide the "Login" text on small screens using Bootstrap's responsive utility classes -->
+                <span class="d-none d-lg-inline"> Login</span>
+            </button>
+        </div>
+    </nav>
+    <div class="container p-2 m-auto">
+        <div class="container-fluid w-100 m-auto text-center text-light p-4">
+            <h2>Revenge of the Blood Hound</h2>
+            <h6>Currently reading - Chapter 32</h6>
+            <div id="navigation-path" class="container-fluid d-flex justify-content-center align-items-center my-4 py-2">
+                <ul class="d-flex list-unstyled mb-0">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right mx-2"></i></li>
+                    <li><a href="">Revenge of the Blood Hound</a></li>
+                    <li><i class="fa-solid fa-chevron-right mx-2"></i></li>
+                    <li><a href="">Chapter 32</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggler w-100 m-auto d-flex justify-content-between px-3">
+                <div>
+                    <!-- Sun and Moon toggle -->
+                    <a href="#" id="toggleTheme">
+                        <i class="fa-regular fa-sun pe-2" id="sunIcon"></i>
+                        <i class="fa-regular fa-moon d-none pe-2" id="moonIcon"></i>
+                    </a>
+
+                    <!-- Bookmark toggle -->
+                    <a href="#" id="toggleBookmark">
+                        <i class="fa-regular fa-bookmark ps-1" id="bookmarkIcon"></i>
+                        <i class="fa-solid fa-bookmark d-none ps-1" id="solidBookmarkIcon"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href=""><i class="fa-solid fa-circle-info"></i></a>
+                </div>
+            </div>
+
+            <div class="container dark d-flex justify-content-between align-items-center my-1 py-2">
+
+                <div class="chapter-selector">
+                    <select class="custom-select" id="exampleSelect">
+                    <option selected>Chapter - 32</option>
+                    <option value="1">Chapter - 1</option>
+                    <option value="2">Chapter - 2</option>
+                    <option value="3">Chapter - 3</option>
+                </select>
+                </div>
+
+
+                <div class="chapter-slider">
+                    <button class="btn btn-secondary me-2" type="button"> <i class="fa-solid fa-chevron-left"></i> Prev</button>
+                    <button class="btn btn-secondary" type="button">Next <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+
+
+            <div id="manga-panel" class="container-fluid">
+                <img src="assets/panel1.jpeg" alt="p1" height="100%" width="100%">
+                <img src="assets/panel2.jpeg" alt="p2" height="100%" width="100%">
+                <img src="assets/panel3.jpeg" alt="p3" height="100%" width="100%">
+            </div>
+        </div>
+        <div class="container dark d-flex justify-content-between align-items-center my-1 py-2">
+
+            <div class="chapter-selector">
+                <select class="custom-select" id="exampleSelect">
+                    <option selected>Chapter - 32</option>
+                    <option value="1">Chapter - 1</option>
+                    <option value="2">Chapter - 2</option>
+                    <option value="3">Chapter - 3</option>
+                </select>
+            </div>
+
+
+            <div class="chapter-slider">
+                <button class="btn btn-primary me-2" type="button"> <i class="fa-solid fa-chevron-left"></i> Prev</button>
+                <button class="btn btn-primary" type="button">Next <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="footer-navigation container-fluid d-flex flex-column align-items-center justify-content-center">
+                <p class="mb-2 fs-6">&copy; 2024 Your Website. All rights reserved.</p>
+                <ul class="list-unstyled d-flex align-items-center justify-content-center">
+                    <li class="mx-2"><a href="#">Home</a></li>
+                    <li class="mx-2"><a href="#">Privacy Policy</a></li>
+                    <li class="mx-2"><a href="#">Terms & Conditions</a></li>
+                    <li class="mx-2">
+                        <a href="#">Our Team</a>
+                    </li>
+                </ul>
+                <ul class="d-flex align-items-center justify-content-center">
+                    <li class="mx-2"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="mx-2"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="mx-2"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="mx-2"><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-to-top" id="scrollToTopBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
+
+</html>
